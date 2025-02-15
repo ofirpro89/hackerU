@@ -1,0 +1,414 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.firstpart {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('bg1.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  gap: 5%;
+}
+.firstpart .topics h1 {
+  padding: 40px;
+  font-family: "Sofadi One";
+  font-size: 80px;
+  color: rgb(6, 15, 0);
+  font-weight: border;
+}
+.firstpart .topics h2 {
+  padding: 10px;
+  text-align: center;
+  font-family: "Sofadi One";
+  font-weight: bolder;
+  font-size: 50px;
+  color: cadetblue;
+  text-shadow: 10px 10px black;
+}
+.firstpart .topics h3 {
+  padding: 10px;
+  text-align: center;
+  font-family: "Sofadi One";
+  font-weight: bolder;
+  font-size: 50px;
+  color: cadetblue;
+}
+
+.btn-box a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 150px;
+  height: 100%;
+  background: #00abf0;
+  border: 2px solid #00abf0;
+  border-radius: 8px;
+  font-size: 19px;
+  color: #081b29;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.1s;
+}
+
+.btn-box a:hover {
+  color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+  background: transparent;
+  color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+  background: #00abf0;
+}
+
+.btn-box a:nth-child(2)::before {
+  color: #00abf0;
+}
+
+.btn-box a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #081b29;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn-box a:hover::before {
+  width: 100%;
+}
+
+.mcontainer {
+  display: flex;
+  flex-direction: column;
+}
+.mcontainer .container {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  padding: 40px;
+  gap: 10%;
+}
+.mcontainer .container img {
+  height: 40vh;
+}
+.mcontainer .container p {
+  font-family: "Sofadi One";
+  font-size: 40px;
+}
+.mcontainer .btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.lang {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.phone-imge{
+  display: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-items: center;
+  align-content: center;
+  gap: 25px;
+  background-image: url('bg1.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+}
+.gallery #gallery-t {
+  text-align: center;
+  font-family: "Sofadi One";
+  font-size: 75px;
+  padding: 40px;
+}
+.gallery .gallery-m {
+  width: 100%;
+  margin: 500px;
+}
+.gallery .hover-image {
+  position: relative;
+  display: inline-block;
+}
+.gallery .image {
+  width: 100%;
+  height: auto;
+}
+.gallery .menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  z-index: 1;
+  transition: opacity 0.8s;
+}
+.gallery .hover-image:hover .menu {
+  display: flex;
+  justify-content: space-around;
+  opacity: 1;
+}
+.gallery .menu img {
+  width: 18rem;
+  height: auto;
+  max-height: 18rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 10px;
+  transition: transform 0.3s, border 0.3s, filter 0.5s;
+  border-radius: 25px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.12);
+}
+.gallery .menu img:hover {
+  transform: scale(2.1);
+  border: 2px solid black;
+  filter: drop-shadow(0 0 10px rgba(249, 7, 7, 0.5));
+}
+.gallery .hover-image:hover .menu {
+  display: flex;
+  opacity: 1;
+  transition-delay: 5.5s;
+}
+
+.form-c {
+  display: flex;
+  width: 100%;
+  height: 30vh;
+  justify-content: center;
+  align-content: center;
+}
+
+#topic-c {
+  font-size: 100px;
+  text-align: center;
+  font-family: "Sofadi One";
+  padding: 20px;
+}
+.form-c{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.input-t {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto;    
+  height: 4rem;
+  width: 15%;
+  gap: 40px;
+  border-radius: 20px;
+  border: 5px solid white;
+  font: normal normal bold 'Heebo';
+  border: 0;
+  border-bottom: 4px plum solid;
+  background: rgba(252, 248, 248, 0.5254901961);
+  direction: ltr;
+}
+
+.contant-b {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+ 
+}
+.text-c{
+  text-align: center;
+  padding: 20px;
+  border: 0;
+  border-bottom: 4px plum solid;
+  background: rgba(252, 248, 248, 0.5254901961);
+}
+.kaftor {
+ display: flex;
+ justify-content: center;
+ gap: 5px;
+}
+
+.footer {
+  background-image: url(../photo/bg1.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+}
+
+
+
+
+.data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 30px;
+}
+
+
+
+.data > h1 {
+
+text-align: right;
+font: normal normal bold 30px/30px 'Satisfy';
+letter-spacing: 0px;
+color: black;
+
+}
+
+
+.input1{
+width: 400px;
+height: 45px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 0;
+border-bottom: 4px solid #ce14e6;
+background:#dac77b;
+opacity: 1;
+
+}
+
+label{
+
+text-align: right;
+font: normal normal bold 20px/20px 'Satisfy';
+letter-spacing: 0px;
+color: black;
+
+}
+
+.button{
+
+top: 611px;
+left: 1382px;
+width: 166px;
+height: 50px;
+background: #D31C75 0% 0% no-repeat padding-box;
+opacity: 1;
+font: normal normal bold 15px/15px 'Satisfy';
+} 
+
+
+.phone-imge {
+
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center;
+  margin: auto;
+  gap: 10px;
+  width: 60%;
+  height: 40vh;
+  
+}
+
+.mobile-image {
+  background-size: cover;
+  width: 20%; 
+  height: 75px; 
+  margin: 5px; 
+  
+}
+
+.phone-imge1 {
+display: none;
+}
+
+@media (max-width: 780px) {
+  .phone-imge1 {
+    display:flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin: auto;
+    gap: 5px;
+    width: 100%;
+    height: 30vh;
+    background-image: url('bg1.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no'-repeat;
+  }
+  
+}
+@media (max-width: 780px) {
+  
+  .mobile-image > a{
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  background: #f5c80048;
+  margin: auto;
+}
+}
+
+@media (min-width: 781px) {
+  .phone-imge {
+      display: none;
+  }
+ 
+
+}
+
+@media (max-width: 780px) {
+  .lang {
+      display: none;
+  }
+}
+
+@media (max-width: 780px){
+  .firstpart > h1{
+  padding: 15px;
+  direction: ltr;
+
+}
+.btn-box a { width: 20%!important;
+  text-align: center;
+  padding: 2px!important;
+  margin: 2px!important;
+  font-size: 15px!important;           
+}
+
+}
+
+@media (max-width : 780px) {
+
+ .mcontainer {
+  padding: 20px;
+}
+
+.container > p{
+  font-size: 10px!important;
+}
+
+.gallery{
+  display: none;
+}
+}

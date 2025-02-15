@@ -1,0 +1,153 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;}
+
+.main{
+
+    display: flex;
+    width: 100%;
+    height: 85vh;  
+    background-image: url('..//photo/shape.png') ;background-size:cover; background-position: center center;background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;    
+
+}
+
+.head > h1{
+
+
+
+text-align: center;
+font: normal normal bold 86px/113px 'Assistant';
+letter-spacing: 0px;
+color: #D3E10E;
+opacity: 1;
+}
+
+.head > p{
+
+text-align: center;
+font: normal normal normal; font-size: 26px; font-family: 'Assistant';
+letter-spacing: 0px;
+color: #F9F9F9;
+opacity: 1;
+}
+
+.tofes-m{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    height: 25vh;
+    width: 100%;
+
+}
+.tofes{
+    display: flex;
+    flex-direction: row-reverse;
+   
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+ 
+}
+
+.input1{
+
+    top: 850px;
+    left: 1092px;
+    width: 418px;
+    height: 50px;
+    background: #F6F6F6 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border: 0;
+    border-bottom: #D3E10E solid 2px;
+}
+
+.kaftor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 19px;
+}
+
+.kaftor1{
+
+    top: 848px;
+    left: 410px;
+    width: 166px;
+    height: 50px;
+    /* UI Properties */
+    background: #D3E10E 0% 0% no-repeat padding-box;
+    opacity: 1;
+
+text-align: center;
+font: normal normal bold 22px/30px 'Assistant';
+letter-spacing: 0.33px;
+color: #011560;
+opacity: 1;
+}
+
+.lable{
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+
+}
+
+
+label{
+
+    text-align: right;
+    font: normal normal bold 16px/21px 'Assistant';
+    letter-spacing: 0px;
+    color: #011560;
+    opacity: 1;
+}
+
+@media (max-width: 780px) {
+    .main {
+        height: 65vh; 
+    }
+
+    .head > h1 {
+        font-size: 36px;
+        line-height: 48px; 
+    }
+
+    .head > p {
+        font-size: 15px; 
+    }
+
+    .tofes-m {
+        height: auto;
+    }
+
+    .tofes {
+        flex-direction: column; 
+        gap: 12px; 
+        padding: 40px!important;
+    }
+
+    .input1 {
+        width: 30%; 
+        height: 40px;
+        margin: 10px auto;
+    }
+
+    .kaftor1 {
+        width: 30%; 
+        font-size: 18px; 
+    }
+
+    label {
+        font-size: 14px; 
+        margin: auto;
+    }
+}

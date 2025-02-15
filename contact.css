@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+.datta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 50vh;
+    gap: 20px; 
+}
+
+.datta > h1{
+
+width: 755px;
+height: 204px;
+text-align: left;
+font: normal normal normal 160px/231px "Satisfy";
+letter-spacing: 0px;
+color: #FFFFFF;
+text-shadow: 0px 0px 36px #00000087;
+opacity: 1;
+width: 100%;
+text-align: center;
+}
+
+.datta > h2{
+    top: 551px;
+left: 695px;
+width: 529px;
+height: 38px;
+/* UI Properties */
+text-align: right;
+font: normal normal normal 32px/38px 'Varela Round';
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+width: 100%;
+text-align: center;
+}
+
+.datta > h3{
+
+width: 1028px;
+height: 60px;
+
+text-align: center;
+font: normal normal normal 16px/20px Varela Round;
+letter-spacing: 0px;
+color: #F9F9F9;
+opacity: 1;
+text-align: center;
+}
+
+.tofes{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+}
+
+.input1{
+
+width: 418px;
+height: 50px;
+/* UI Properties */
+background: #F6F6F624 0% 0% no-repeat padding-box;
+border: 2px solid #FFFFFF;
+opacity: 1;
+}
+
+.kaftor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 19px;
+}
+
+.kaftor1{
+
+width: 206px;
+height: 50px;
+/* UI Properties */
+background: #FFFFFF 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.lable{
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+
+}
+
+
+label{
+
+width: 24px;
+height: 20px;
+text-align: center;
+font: normal normal normal 16px/20px 'Varela Round';
+letter-spacing: 0px;
+color: #F9F9F9;
+opacity: 1;
+}
+
+
+
+@media (max-width: 780px) {
+    .head {
+        height: auto;
+        padding: 20px; 
+    }
+
+    .datta > h1 {
+        font-size: 50px;
+       
+    }
+
+    .datta > h2 {
+        font-size: 20px;
+        padding: -40px!important;
+    }
+
+    .datta > h3 {
+        font-size: 10px;
+        padding: -40px; 
+    }
+
+    .tofes{
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        width: 30%;
+
+    }
+
+
+    .input1 {
+        padding: 20px;       
+        width: 90%; 
+        height: 40px;
+        margin: 10px auto;
+    }
+
+    .kaftor1 {
+        width: 100%; 
+        font-size: 16px; 
+    }
+
+    label {
+        font-size: 14px; 
+        text-align: center!important;
+        margin: auto;
+    }
+}

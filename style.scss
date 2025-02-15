@@ -1,0 +1,221 @@
+
+$text-s:'Sofadi One'; 
+$space: 20px;
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.firstpart{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('bg1.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 5%;
+
+    .topics h1{ padding: 40px; font-family: 'Sofadi One'; font-size: 80px; color: rgb(6, 15, 0); font-weight: border;}
+    .topics h2{ padding: 10px; text-align: center; font-family: 'Sofadi One'; font-weight: bolder; font-size: 50px; color: cadetblue; text-shadow: 10px 10px black;}
+    .topics h3{ padding: 10px; text-align: center; font-family: 'Sofadi One'; font-weight: bolder; font-size: 50px; color: cadetblue;}
+
+}
+
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .1s;
+}
+
+.btn-box a:hover{
+    color: #00abf0;
+}
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: #00abf0;
+}
+.btn-box a:nth-child(2):hover{
+    background: #00abf0;
+}
+.btn-box a:nth-child(2)::before{
+    color: #00abf0;
+}
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box a:hover::before{
+    width: 100%;
+}
+
+
+.mcontainer{
+    display: flex;
+    flex-direction: column;
+
+.container{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    padding: 40px;
+    gap:10%;
+ img{height: 40vh;}
+ p{font-family: $text-s; font-size: 40px;}
+}
+.btn-box{    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;}
+}
+
+.lang{
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+.gallery {
+@include flex-gellery;
+@include bgimge;
+height: 80vh;  
+
+#gallery-t{
+    text-align: center; font-family: $text-s; font-size: 75px; padding: 40px;
+}
+.gallery-m {
+    width: 100%;
+
+    margin: 500px;
+   
+}
+
+.hover-image {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.image {
+    width: 100%;
+    height: auto;
+   
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    z-index: 1;
+    transition: opacity 0.8s; 
+}
+
+.hover-image:hover .menu {
+    display: flex;
+    justify-content: space-around;
+    opacity: 1;
+}
+
+.menu img {
+    width: 18rem; 
+    height: auto; 
+    max-height: 18rem; 
+    object-fit: cover; 
+    margin: 0 10px; 
+    transition: transform 0.3s, border 0.3s, filter 0.5s;
+    border-radius: 25px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.12);
+    
+    
+}
+
+.menu img:hover {
+    transform: scale(2.1); 
+    border: 2px solid black; 
+    filter: drop-shadow(0 0 10px rgba(249, 7, 7, 0.5)); 
+}
+
+.hover-image:hover .menu {
+    display: flex;
+    opacity: 1;
+    transition-delay: 5.5s; 
+}
+}
+
+.form-c{
+    @include flex-contact;
+}
+#topic-c{
+    font-size: 100px;
+    text-align: center;
+    font-family: $text-s;
+    padding: $space;
+
+}
+
+.input-c{
+    padding: 20px;
+    height: 4rem;
+    margin: 10px;
+    border-radius: 20px;
+    border: 5px solid white;
+    background: #fcf8f886;
+
+}
+
+.contant-b{
+
+    padding: 50px;
+}
+
+.kaftor{
+    margin: 0 280px;
+
+}
+
+.footer{
+    @include bgimge;
+    width: 100%;
+    height: 30vh;
+}
+
+
+
+    @media (max-width: 780px) {
+        .lang {
+            display: flex;
+            flex-direction: column;
+        }
+    }

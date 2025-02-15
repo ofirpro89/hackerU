@@ -1,0 +1,127 @@
+*{margin:0;
+padding:0;
+box-sizing: border-box;
+}
+.main{
+
+    width: 100%;
+    height: 600px;
+    background-image: url(../photo/Path\ 15.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    direction: rtl;
+    position: relative;
+}
+
+.tofes{
+    position: absolute;
+    background: #1A1A1AD4 0% 0% no-repeat padding-box;
+    width: 600px;
+    height: 650px;
+    top: 0;
+    left: 3;
+    margin: 350px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.tofes > h2 {
+
+    text-align: center;
+    font: normal normal 900 36px/53px 'Heebo';
+    color: #FFFFFF; 
+    padding: 65px;
+    font-size: 40px;
+    letter-spacing: 0px;
+}
+
+.tofes > p{
+
+text-align: center;
+font: normal normal normal 20px/29px 'Heebo';
+letter-spacing: 0px;
+color: #F9F9F9;
+font-size: 20px;
+margin: 20px;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 20px;
+    
+}
+
+.input1{
+width: 418px;
+height: 50px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #D31C75;
+opacity: 1;
+
+}
+
+label{
+
+text-align: right;
+font: normal normal bold 16px/24px 'Heebo';
+letter-spacing: 0px;
+color: #FFFFFF;
+
+}
+
+.button{
+
+top: 611px;
+left: 1382px;
+width: 166px;
+height: 50px;
+background: #D31C75 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+@media (max-width: 780px) {
+    .main {
+        height: 400px!important; 
+    }
+
+    .tofes {
+        width: 40%; /* רוחב מותאם */
+        height: auto; /* גובה גמיש */
+        margin: 10px auto; /* מרכז את התיבה */
+        padding: 10px; /* padding מותאם */
+    }
+
+    .tofes > h2 {
+        font-size: 25px!important;
+        padding: 30px!important;
+        color: white!important;
+    }
+
+    .tofes > p {
+        font-size: 16px; /* גודל גופן קטן יותר */
+        margin: 10px; /* מרווח קטן יותר */
+    }
+
+    .input1 {
+        width: 90%; /* רוחב גמיש */
+        height: 40px; /* גובה קטן יותר */
+        margin: 10px auto; /* מרכז את השדה */
+    }
+
+    label {
+        font-size: 14px; /* גודל גופן קטן יותר */
+    }
+
+    .button {
+        width: 80%; /* רוחב גמיש */
+        margin: 20px auto; /* מרכז את הכפתור */
+    }
+}

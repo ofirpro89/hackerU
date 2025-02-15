@@ -1,0 +1,147 @@
+/* כללי */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 26px;
+  }
+  
+  /* עיצוב לטופס */
+  .form-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .form-container:hover {
+    transform: scale(1.02);
+  }
+  
+  /* עיצוב לשדות בחירה */
+  .day-selection {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+  }
+  
+  select:focus {
+    border-color: #4CAF50;
+    background-color: #f0f8f0;
+    outline: none;
+  }
+  
+  option {
+    padding: 10px;
+  }
+  
+  /* כפתור שליחה */
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* אנימציה שדה הבחירה */
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .day-selection {
+    animation: scaleUp 0.5s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+  
+  .day-selection:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .day-selection:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .day-selection:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  .day-selection:nth-child(4) {
+    animation-delay: 0.5s;
+  }
+  
+  .day-selection:nth-child(5) {
+    animation-delay: 0.6s;
+  }
+  
+  .day-selection:nth-child(6) {
+    animation-delay: 0.7s;
+  }
+  
+  .day-selection:nth-child(7) {
+    animation-delay: 0.8s;
+  }
+  
+  /* עיצוב תגובות שגיאה */
+  input:invalid, select:invalid {
+    border-color: #f44336;
+  }
+  
+  input:valid, select:valid {
+    border-color: #4CAF50;
+  }
+  
+  input:focus:invalid, select:focus:invalid {
+    background-color: #ffdddd;
+  }
+  
+  input:focus:valid, select:focus:valid {
+    background-color: #d4ffd1;
+  }
+  
