@@ -28,7 +28,7 @@ const getDayName = (index) => {
     return dayNames[index];
 }
 
-console.log(mange)
+
 
 
 
