@@ -264,15 +264,22 @@
 
 
 
-
-.data{
+.data {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  padding: 30px;
+  gap: 25px; /* הגדלתי את הרווח בין האלמנטים */
+  padding: 50px; /* השארתי את הפדינג הגדול יותר */
+  height: 60vh; /* הגדלתי את הגובה כדי שיהיה יותר מקום פנוי */
+  background-image: url('bg1.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px; /* הוספתי רדיוס פינות שיתן לדיב מראה רך יותר */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* הוספתי צללית עדינה */
 }
+
 
 
 
@@ -282,6 +289,7 @@ text-align: right;
 font: normal normal bold 30px/30px 'Satisfy';
 letter-spacing: 0px;
 color: black;
+padding: 10px;
 
 }
 
@@ -412,3 +420,72 @@ display: none;
   display: none;
 }
 }
+
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.project-card {
+  width: 25%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid gold;
+  border-radius: 15px; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; 
+}
+
+.project-card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.project-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 12px 18px;
+  border-radius: 25px; 
+  font-size: 18px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-link:hover {
+  background-color: rgba(0, 0, 0, 0.8); 
+  transform: translateY(-3px); 
+}
+
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 45%;
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    width: 90%;
+    height: 200px;
+  }
+}
+
