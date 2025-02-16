@@ -1,0 +1,26 @@
+*{margin:0;
+padding:0;
+box-sizing: border-box;}
+
+#mainpage{
+
+    border: solid 4px black;
+    width: 35%;
+    height: 80vh;
+    position: absolute;
+    left: 0;
+    background-image: url(/new/bdika/set.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+   
+
+}
+
+.inline{
+
+    display: inline-block;
+}
