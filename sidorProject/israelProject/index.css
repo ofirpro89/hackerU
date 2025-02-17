@@ -112,7 +112,7 @@ label {
 
 }
 
-/* עיצוב עבור שדות הטקסט */
+
 input {
     width: 100%;
     padding: 12px;
@@ -124,14 +124,14 @@ input {
     transition: border-color 0.3s ease;
 }
 
-/* עיצוב ברגע שמסמן את השדה */
+
 input:focus {
     border-color: #4CAF50;
     background-color: #ffffff;
     outline: none;
 }
 
-/* עיצוב כפתור */
+
 button {
     width: 100%;
     padding: 12px;
@@ -144,9 +144,77 @@ button {
     transition: background-color 0.3s ease;
 }
 
-/* עיצוב כפתור כשמעבירים מעל */
+
 button:hover {
     background-color: #45a049;
 }
 
-/*chake*/
+
+
+
+@media (max-width: 768px) {
+
+    .formEria {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #title {
+        font-size: 40px;
+    }
+
+    #userNameEra, #passEra {
+        font-size: 25px;
+    }
+
+    #userName, #password {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    #btn {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+ 
+    .buttons {
+        padding: 8px;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #title {
+        font-size: 30px;
+    }
+
+    #userNameEra, #passEra {
+        font-size: 20px;
+    }
+
+    #userName, #password {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    #btn {
+        width: 100%;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+}
