@@ -16,12 +16,16 @@ const drawTableRows = (users) => {
         `;
         const logoutBtn = document.createElement('button');
         logoutBtn.textContent = 'התנתקות';
+        logoutBtn.style.background="red";
+        logoutBtn.style.color="blue";
         logoutBtn.addEventListener('click', () => {
             User.logout(user.id);
         });
 
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'מחיקה';
+        deleteBtn.style.background = 'green';
+        deleteBtn.style.color = 'white';
         deleteBtn.addEventListener('click', () => {
             User.removeUser(user.id);
         });
@@ -29,6 +33,8 @@ const drawTableRows = (users) => {
         // you should complete this part
         const editButton = document.createElement('button');
         editButton.textContent = 'עריכה';
+        editButton.style.background = 'yellow';
+        editButton.style.color = 'black';
         editButton.addEventListener('click', () => { });
 
         row.appendChild(logoutBtn);
