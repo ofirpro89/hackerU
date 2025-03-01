@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap" rel="stylesheet">
     <title>ofir dayan project</title>
+    <script src="tofes.js" defer></script>
 </head>
 <body dir="rtl">
 
@@ -148,13 +149,19 @@
   
 
 
-<div class="data" id="contact"> 
-    <h1>contact us</h1>  
-    <label> full name</label>
-   <input type="text" class="input1" required>
-   <label> email</label>
-   <input type="email" required class="input1">
-   <input type="submit" value="send" class="button">   
+  <div class="data" id="contact"> 
+    <h1>Contact Us</h1>  
+    <label for="full-name">Full Name</label>
+    <input type="text" id="full-name" class="input1" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required class="input1">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" required class="input1">
+
+    <input type="submit" value="Send" class="button">
+</div>  
 </div>    
 </div>
 
