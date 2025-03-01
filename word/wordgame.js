@@ -1,7 +1,7 @@
 let rowindex = 1;
 let colindex = 1;
 let currentWord = "";
-const words = ["שולחן", "פרחתי", "ספרים", "חיילים", "גיבור", "ארוחה", "נופים", "רכבת", "גזירה"];
+const words = ["שולחן", "מדינה", "ספרים", "חיילים", "גיבור", "ארוחה", "חולצה", "כביסה", "גזירה"];
 const rundomIndex = Math.floor(Math.random() * words.length ) +1;
 const word = words[rundomIndex];
 let chakeWord = words[rundomIndex].split("");
@@ -45,3 +45,4 @@ let start = (object)=>{
 
 
 
+console.log(word)
