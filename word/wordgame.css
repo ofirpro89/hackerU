@@ -1,70 +1,188 @@
-.bord{
-   
-    border: solid 4px black;
-    width: 40%;
+/* הגדרת box-sizing כדי למנוע בעיות עם padding ו-border */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* עיצוב של לוח המשחק */
+.bord {
+    border: solid 4px #e0e0e0; /* גבול בהיר ומעודן */
+    width: 70%; /* רוחב מותאם עבור מחשבים */
+    max-width: 900px;
     height: 70vh;
-    margin: auto;
-   padding-bottom: 40px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+    margin: 50px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa; /* צבע רקע עדין */
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* הצללה רכה ונקייה */
+    transition: all 0.3s ease-in-out;
 }
 
-.first-line{
-width: 100%;
-height: 10vh;
-border: 2px solid black;
-display: flex;
-flex-direction: row;
-
+/* העיצוב משתנה ברגע שהמחשב קטן */
+@media only screen and (max-width: 768px) {
+    .bord {
+        width: 90%; /* הרוחב יקטן באופן גמיש למסכים קטנים יותר */
+        height: auto;
+    }
 }
 
-.first-line > div{
-    background: #fdf7f7;
+/* עיצוב השורה הראשונה */
+.first-line {
     width: 100%;
-    height: 15vh;
-    border: 1px solid rgb(20, 1, 1);
-    font-size: 30px;
+    height: 12vh;
+    border: 2px solid #d1d1d1; /* גבול עדין */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px; /* רווח בין התאים */
+}
+
+/* עיצוב תאים בשורה הראשונה */
+.first-line > div {
+    background: #fff;
+    flex: 1; /* כל תא תופס מקום באופן גמיש */
+    height: 100%;
+    border: 2px solid #e0e0e0;
+    font-size: 26px;
     text-align: center;
-    color: rgb(110, 231, 35);
-    padding: 20px;
+    color: #333;
+    padding: 12px;
     font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.text{
-    height: 17vh;
+.first-line > div:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* עיצוב של תיבת הטקסט */
+.text {
     width: 100%;
-
+    margin-bottom: 20px;
 }
 
-.text > input{
-
+.text > input {
     width: 100%;
     height: 15vh;
+    font-size: 24px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    transition: border-color 0.3s ease;
 }
 
-.buttons{
+.text > input:focus {
+    border-color: #8aec09; /* הדגשה ירוקה כאשר יש פוקוס */
+    outline: none;
+}
+
+/* עיצוב של כפתורים */
+.buttons {
     display: flex;
     flex-wrap: wrap;
-
     justify-content: center;
-    margin: auto;
-    padding: 10px;
-    height: 6vh;
+    gap: 15px;
     width: 100%;
-    gap: 10px;
-    width: 100%;
-    
 }
 
+/* עיצוב של כפתור בודד */
 .buttons > button {
-
-    width: 10%;
-    height: 95%;
-    border-radius: 14px;
-    font-size: 40px;
+    width: 15%;
+    height: 50px;
+    border-radius: 12px;
+    font-size: 24px;
     background: #8aec09;
-    border: 2px solid wheat;
-    box-shadow: 4px 2px rgb(234, 6, 6);
+    border: 2px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.buttons > button:hover {
+    background-color: #7bcf08;
+    transform: scale(1.1);
+}
+
+.buttons > button:active {
+    transform: scale(0.95);
+}
+
+/* עיצוב של כפתור "הגש" או "שלח" */
+.buttons > button.submit {
+    background: #ff4b5c;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+.buttons > button.submit:hover {
+    background-color: #e02e3f;
+}
+
+/* Media Queries לעיצוב רספונסיבי */
+@media only screen and (max-width: 768px) {
+    .bord {
+        width: 90%; /* רוחב מותאם למסכים קטנים יותר */
+        height: auto;
+    }
+
+    .first-line {
+        height: 18vh;
+        flex-direction: column; /* שינוי לסידור תאים בעמודה */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .first-line > div {
+        width: 100%; /* תאים יותר רחבים במובייל */
+        margin-bottom: 12px;
+    }
+
+    .buttons {
+        flex-direction: column; /* סידור הכפתורים בעמודה */
+        gap: 12px;
+    }
+
+    .buttons > button {
+        width: 80%; /* רוחב יותר רחב בכפתורים במובייל */
+        font-size: 28px; /* גודל פונטים קטן יותר */
+    }
+
+    .text > input {
+        font-size: 22px; /* גודל טקסט קטן יותר בקלט */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .bord {
+        width: 95%; /* רוחב כמעט מלא במוביילים */
+    }
+
+    .first-line {
+        height: 22vh; /* גובה מותאם יותר לתאים */
+        flex-direction: column; /* כל התאים יהיו בעמודה */
+    }
+
+    .first-line > div {
+        width: 100%; /* תאים ימלאו את רוחב המסך */
+        margin-bottom: 12px;
+    }
+
+    .buttons {
+        flex-direction: column; /* סידור הכפתורים בעמודה */
+        gap: 12px;
+    }
+
+    .buttons > button {
+        width: 80%;
+        font-size: 26px;
+    }
+
+    .text > input {
+        font-size: 20px;
+    }
 }
